@@ -99,7 +99,7 @@ impl<L: Language, N: Analysis<L>> Rewrite<L, N> {
     }
 
     /// This `run` is for testing use only. You should use things
-    /// from the `egg::run` module
+    /// from the `egg_isotope::run` module
     #[cfg(test)]
     pub(crate) fn run(&self, egraph: &mut EGraph<L, N>) -> Vec<Id> {
         let start = crate::util::Instant::now();
@@ -232,7 +232,7 @@ where
 ///
 /// # Example
 /// ```
-/// use egg::{rewrite as rw, *};
+/// use egg_isotope::{rewrite as rw, *};
 /// use std::sync::Arc;
 ///
 /// define_language! {
@@ -244,7 +244,7 @@ where
 ///     }
 /// }
 ///
-/// type EGraph = egg::EGraph<Math, MinSize>;
+/// type EGraph = egg_isotope::EGraph<Math, MinSize>;
 ///
 /// // Our metadata in this case will be size of the smallest
 /// // represented expression in the eclass.

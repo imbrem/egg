@@ -22,7 +22,7 @@ The [`EGraph::dot`](EGraph::dot()) method creates `Dot`s.
 # Example
 
 ```no_run
-use egg::{*, rewrite as rw};
+use egg_isotope::{*, rewrite as rw};
 
 let rules = &[
     rw!("mul-commutes"; "(* ?x ?y)" => "(* ?y ?x)"),
@@ -117,7 +117,7 @@ where
     ///
     /// Can be used to run a different binary than `dot`:
     /// ```no_run
-    /// # use egg::*;
+    /// # use egg_isotope::*;
     /// # let mut egraph: EGraph<SymbolLang, ()> = Default::default();
     /// egraph.dot().run(
     ///     "/path/to/my/dot",

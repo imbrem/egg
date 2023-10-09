@@ -23,7 +23,7 @@ be added later.
 
 The following macro invocation shows the the accepted forms of variants:
 ```
-# use egg::*;
+# use egg_isotope::*;
 define_language! {
     enum SimpleLanguage {
         // string variant with no children
@@ -225,7 +225,7 @@ the outermost, and the last condition being the innermost.
 
 # Example
 ```
-# use egg::*;
+# use egg_isotope::*;
 use std::borrow::Cow;
 use std::sync::Arc;
 define_language! {
@@ -238,7 +238,7 @@ define_language! {
     }
 }
 
-type EGraph = egg::EGraph<SimpleLanguage, ()>;
+type EGraph = egg_isotope::EGraph<SimpleLanguage, ()>;
 
 let mut rules: Vec<Rewrite<SimpleLanguage, ()>> = vec![
     rewrite!("commute-add"; "(+ ?a ?b)" => "(+ ?b ?a)"),

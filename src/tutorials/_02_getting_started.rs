@@ -40,7 +40,7 @@ egg = "0.9.5"
 ```
 
 All of the code samples below work, but you'll have to `use` the relevant types.
-You can just bring them all in with a `use egg::*;` at the top of your file.
+You can just bring them all in with a `use egg_isotope::*;` at the top of your file.
 
 ## Now you're speaking my [`Language`]
 
@@ -62,7 +62,7 @@ Most [`Language`]s, including [`SymbolLang`], can be parsed and pretty-printed.
 That means that [`RecExpr`]s in those languages
   implement the [`FromStr`] and [`Display`] traits from the Rust standard library.
 ```
-# use egg::*;
+# use egg_isotope::*;
 // Since parsing can return an error, `unwrap` just panics if the result doesn't return Ok
 let my_expression: RecExpr<SymbolLang> = "(foo a b)".parse().unwrap();
 println!("this is my expression {}", my_expression);
@@ -77,7 +77,7 @@ But it's intentionally kind of awkward to create e-nodes with children in isolat
 The way to make meaningful [`Id`]s is by adding e-nodes to either an [`EGraph`] or a [`RecExpr`]:
 
 ```
-# use egg::*;
+# use egg_isotope::*;
 let mut expr = RecExpr::default();
 let a = expr.add(SymbolLang::leaf("a"));
 let b = expr.add(SymbolLang::leaf("b"));
@@ -102,7 +102,7 @@ We'll use a [`Pattern`], which implements the [`Searcher`] trait,
   to search the e-graph for matches:
 
 ```
-# use egg::*;
+# use egg_isotope::*;
 // let's make an e-graph
 let mut egraph: EGraph<SymbolLang, ()> = Default::default();
 let a = egraph.add(SymbolLang::leaf("a"));
@@ -141,7 +141,7 @@ We'll use the [`rewrite!`] macro to easily create [`Rewrite`]s which consist of 
 From there we can use the [`Runner`] API to run `egg`'s equality saturation algorithm.
 Finally, we can use an [`Extractor`] to get the best result.
 ```
-use egg::{*, rewrite as rw};
+use egg_isotope::{*, rewrite as rw};
 
 let rules: &[Rewrite<SymbolLang, ()>] = &[
     rw!("commute-add"; "(+ ?x ?y)" => "(+ ?y ?x)"),

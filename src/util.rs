@@ -32,7 +32,7 @@ use crate::*;
 ///
 /// # Example
 /// ```rust
-/// use egg::Symbol;
+/// use egg_isotope::Symbol;
 ///
 /// assert_eq!(Symbol::from("foo"), Symbol::from("foo"));
 /// assert_eq!(Symbol::from("foo"), "foo".parse().unwrap());

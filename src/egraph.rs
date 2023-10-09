@@ -136,7 +136,7 @@ impl<L: Language, N: Analysis<L>> EGraph<L, N> {
     /// Returns `true` if the egraph is empty
     /// # Example
     /// ```
-    /// use egg::{*, SymbolLang as S};
+    /// use egg_isotope::{*, SymbolLang as S};
     /// let mut egraph = EGraph::<S, ()>::default();
     /// assert!(egraph.is_empty());
     /// egraph.add(S::leaf("foo"));
@@ -151,7 +151,7 @@ impl<L: Language, N: Analysis<L>> EGraph<L, N> {
     /// Actually returns the size of the hashcons index.
     /// # Example
     /// ```
-    /// use egg::{*, SymbolLang as S};
+    /// use egg_isotope::{*, SymbolLang as S};
     /// let mut egraph = EGraph::<S, ()>::default();
     /// let x = egraph.add(S::leaf("x"));
     /// let y = egraph.add(S::leaf("y"));
@@ -480,7 +480,7 @@ impl<L: Language, N: Analysis<L>> EGraph<L, N> {
     ///
     /// # Example
     /// ```
-    /// use egg::{*, SymbolLang as S};
+    /// use egg_isotope::{*, SymbolLang as S};
     /// let mut egraph = EGraph::<S, ()>::default();
     /// let x = egraph.add(S::leaf("x"));
     /// let y = egraph.add(S::leaf("y"));
@@ -538,7 +538,7 @@ impl<L: Language, N: Analysis<L>> EGraph<L, N> {
     ///
     /// # Example
     /// ```
-    /// use egg::{*, SymbolLang as S};
+    /// use egg_isotope::{*, SymbolLang as S};
     /// let mut egraph = EGraph::<S, ()>::default();
     /// let x = egraph.add(S::leaf("x"));
     /// let y = egraph.add(S::leaf("y"));
@@ -629,7 +629,7 @@ impl<L: Language, N: Analysis<L>> EGraph<L, N> {
     ///
     /// # Example
     /// ```
-    /// # use egg::*;
+    /// # use egg_isotope::*;
     /// let mut egraph: EGraph<SymbolLang, ()> = Default::default();
     /// let a = egraph.add(SymbolLang::leaf("a"));
     /// let b = egraph.add(SymbolLang::leaf("b"));
@@ -1097,7 +1097,7 @@ impl<L: Language, N: Analysis<L>> EGraph<L, N> {
     ///
     /// # Example
     /// ```
-    /// use egg::{*, SymbolLang as S};
+    /// use egg_isotope::{*, SymbolLang as S};
     /// let mut egraph = EGraph::<S, ()>::default();
     /// let x = egraph.add(S::leaf("x"));
     /// let y = egraph.add(S::leaf("y"));

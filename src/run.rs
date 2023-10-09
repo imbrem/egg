@@ -75,7 +75,7 @@ You can add your own data to this by implementing the
 # Example
 
 ```
-use egg::{*, rewrite as rw};
+use egg_isotope::{*, rewrite as rw};
 
 define_language! {
     enum SimpleLanguage {
@@ -353,7 +353,7 @@ where
     ///
     /// # Example
     /// ```
-    /// # use egg::*;
+    /// # use egg_isotope::*;
     /// let rules: &[Rewrite<SymbolLang, ()>] = &[
     ///     rewrite!("commute-add"; "(+ ?a ?b)" => "(+ ?b ?a)"),
     ///     // probably some others ...

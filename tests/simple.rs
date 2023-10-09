@@ -1,4 +1,4 @@
-use egg::*;
+use egg_isotope::*;
 
 define_language! {
     enum SimpleLanguage {

@@ -31,7 +31,7 @@ impl<L: Language> MultiPattern<L> {
     /// Creates a new multipattern, binding the given patterns to the corresponding variables.
     ///
     /// ```
-    /// use egg::*;
+    /// use egg_isotope::*;
     ///
     /// let mut egraph = EGraph::<SymbolLang, ()>::default();
     /// egraph.add_expr(&"(f a a)".parse().unwrap());

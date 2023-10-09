@@ -223,8 +223,8 @@ where
 /// # Example
 ///
 /// ```
-/// # use egg::*;
-/// egg::test_fn! {
+/// # use egg_isotope::*;
+/// egg_isotope::test_fn! {
 ///     // name of the generated test function
 ///     my_test_name,
 ///     // the rules to use
